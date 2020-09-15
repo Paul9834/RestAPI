@@ -23,4 +23,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+
+dbManager.sequelizeConnection.authenticate().then(
+    () => {
+        console.log("***Connected***");
+        dbManager.sequelizeConnection.sync().then(
+            () => {
+                console.log('Database synced')
+            }
+
+        );
+    }
+).catch (
+    err => {
+        console.log("Failed", err.message)
+    }
+);
+
+
+
+
 module.exports = app;
