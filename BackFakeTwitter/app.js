@@ -8,6 +8,12 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+
+// Import manager
+const dbManager = require("./database/db-manager");
+
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
