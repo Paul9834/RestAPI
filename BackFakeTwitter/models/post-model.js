@@ -6,7 +6,10 @@ module.exports = (sequelize, Sequelize) => {
                 type: Sequelize.STRING,
                 primaryKey: true
             },
-            message: Sequelize.STRING,
+            post: {
+                type: Sequelize.STRING,
+                unique: true
+            },
             published_date: Sequelize.DATE,
         }, {
             tableName: "posts"
