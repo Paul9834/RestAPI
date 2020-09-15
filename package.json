@@ -1,11 +1,24 @@
 {
   "name": "restapi",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kevin Paul Montealegre Melo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paul9834/RestAPI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Paul9834/RestAPI/issues"
+  },
+  "homepage": "https://github.com/Paul9834/RestAPI#readme",
+  "description": ""
 }
