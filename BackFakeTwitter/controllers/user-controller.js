@@ -52,10 +52,35 @@ async function getAllUsers (req, res) {
             }
         );
     }
+}
 
+async function findOneUserById(req, res) {
+    try {
+        const {
+            idUser
+        } = req.params;
+
+        const userFound = await  dbManager.User.findOne(
+            {
+                where: {
+                    idUser: idUser
+                }
+            }
+        );
+
+        res.json (userFound);
+
+    } catch (error) {
+        res.status(500).send(
+            {
+                message: "Error Happen!:/ "
+            }
+        );
+    }
 
 }
 
 exports.createUser = createUser;
 exports.getAllUsers = getAllUsers;
+exports.findOneUserById = findOneUserById;
 
